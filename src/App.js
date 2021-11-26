@@ -25,34 +25,15 @@ function App() {
           maxHeight: '100%',
         }}/> 
     <Box sx={{ position: 'fixed', width: '100%', zIndex: 100 }}>
-      <Particles
-        params={{
-          "particles": {
-              "number": {
-                  "value": 50
-              },
-              "size": {
-                  "value": 3
-              }
-          },
-          "interactivity": {
-              "events": {
-                  "onhover": {
-                      "enable": true,
-                      "mode": "repulse"
-                      
-                  },
 
-              }
-          }
-      }} />
     </Box>
-
-    <StickyContainer>
-      <ContactFab sx={{
-        position: 'sticky',
-      }}/>
-    </StickyContainer>
+    <Box sx={{
+        position: 'fixed',
+        bottom: 0,
+        right: 200,
+      }}>
+      <ContactFab sx={{ }}/>
+    </Box>
   </Box>
 );
 }

@@ -18,6 +18,16 @@ const theme = createTheme({
   }
 });
 
+/*
+palette:
+#16171C
+#8C509F
+#D177A8
+#089EBA
+#01DBEC
+
+*/
+
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>

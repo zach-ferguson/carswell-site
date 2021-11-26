@@ -1,0 +1,20 @@
+.fab {
+    background: linear-gradient(90deg,#f0f0f1,#e2e2e3,#d4d3d5,#c6c5c8);
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
+    transition: 1s;
+  }
+
+ 
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
