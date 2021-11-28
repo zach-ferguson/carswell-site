@@ -1,14 +1,10 @@
 import { Box } from '@mui/system';
-import Particles from 'react-particles-js';
-import { StickyContainer } from 'react-sticky';
 import './App.css';
 import ContactFab from './Components/ContactFab';
 import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
 
 function App() {
-
-
   return (
     <Box className="App"
       sx={{

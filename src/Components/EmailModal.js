@@ -23,8 +23,8 @@ const modalStyle = {
 };
 
 export default function EmailModal(props) {
-    const [emailError, setEmailError]= useState(false);
-    const [nameError, setNameError]= useState(false);
+    const [emailError] = useState(false);
+    const [nameError] = useState(false);
 
 
   return (
@@ -44,56 +44,56 @@ export default function EmailModal(props) {
         <Fade in={props.open}>
           <Box sx={modalStyle}>
             <Box
-                component="form"
-                noValidate
-                autoComplete="on"
-                sx={{
-                    height: '100%',
-                    my: 'auto',
-                }}
-                >
-                <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', my: 'auto' }}>
-                   <TextField
-                        error={nameError}
-                        id="name-field"
-                        label="Name"
-                        required
-                        sx={{ marginTop: '25px', width: '400px' }}
-                        />
-                    <TextField
-                        error={emailError}
-                        id="email-field"
-                        label="Email"
-                        required
-                        sx={{ marginTop: '25px', width: '400px' }}
+              component="form"
+              noValidate
+              autoComplete="on"
+              sx={{
+                height: '100%',
+                my: 'auto',
+              }}
+              >
+              <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', my: 'auto' }}>
+                <TextField
+                    error={nameError}
+                    id="name-field"
+                    label="Name"
+                    required
+                    sx={{ marginTop: '25px', width: '400px' }}
                     />
-                    <TextField
-                        multiline
-                        rows={10}
-                        error={emailError}
-                        id="message-field"
-                        sx={{ marginTop: '25px', width: '400px', height: '600px'}}
-                        placeholder='Message'
-                    />
-                    <Button disableRipple={true} className='send-button'
-                      sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        width: '50%',
-                        borderRadius: '25px',
-                        bgcolor: 'gray',
-                        marginTop: 'auto',
-                        fontSize: '24px',
-                        textTransform: 'none',
-                        fontWeight: 600,
-                        border: '1px solid teal',
-                        }}> 
-                        Send
-                        <SendIcon sx={{
-                          ml: '1rem',
-                        }}/>
-                    </Button>
-                </Box>
+                <TextField
+                    error={emailError}
+                    id="email-field"
+                    label="Email"
+                    required
+                    sx={{ marginTop: '25px', width: '400px' }}
+                />
+                <TextField
+                    multiline
+                    rows={10}
+                    error={emailError}
+                    id="message-field"
+                    sx={{ marginTop: '25px', width: '400px', height: '600px'}}
+                    placeholder='Message'
+                  />
+                  <Button disableRipple={true} className='send-button'
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      width: '50%',
+                      borderRadius: '25px',
+                      bgcolor: 'gray',
+                      marginTop: 'auto',
+                      fontSize: '24px',
+                      textTransform: 'none',
+                      fontWeight: 600,
+                      border: '1px solid teal',
+                      }}> 
+                      Send
+                      <SendIcon sx={{
+                        ml: '1rem',
+                      }}/>
+                </Button>
+              </Box>
             </Box>
           </Box>
         </Fade>

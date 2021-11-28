@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,7 +12,7 @@ import '../css/Navbar.css'
 import { Slide } from '@mui/material';
 
 export default function Navbar() {
-  const [mounted, setMounted] = useState(true)
+  const [mounted] = useState(true)
 
   return (
     <Slide direction="down" in={mounted} mountOnEnter unmountOnExit timeout={1000}>
@@ -28,7 +28,12 @@ export default function Navbar() {
                   edge="start"
                   color="inherit"
                   aria-label="menu"
-                  sx={{ mr: 1 }}
+                  sx={{ mr: 1,
+                    '&:hover': {
+                      cursor: 'default'
+                    }
+                   }}
+                  
                 >
                   <MusicNoteIcon sx={{ 
                     fontSize: 32,
@@ -39,7 +44,10 @@ export default function Navbar() {
                   flexGrow: 1 , 
                   fontFamily: 'Nunito Sans',
                   fontSize: 26,
-                  color: '#cfd8dc'
+                  color: '#cfd8dc',
+                  '&:hover': {
+                    cursor: 'default',
+                  }
                   }}>
                 Carswell Music 
               </Typography>
@@ -83,7 +91,7 @@ export default function Navbar() {
                         transition: '.4s'
                       }
                      }}>
-                      <img className='icon' src={process.env.PUBLIC_URL + '/spotify_icon.png'} />
+                      <img className='icon' alt={'spotify_icon'} src={process.env.PUBLIC_URL + '/spotify_icon.png'} />
                     </IconButton>
                   </a>
                 </Box>

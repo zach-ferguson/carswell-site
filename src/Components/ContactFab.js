@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import NavigationIcon from '@mui/icons-material/Navigation';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
-import useHover from '../Hooks/useHover';
 import { Slide, Typography } from '@mui/material';
 import '../css/fab.css';
 import EmailModal from './EmailModal';
 
 export default function ContactFab() {
-    const [hoverRef, isHovered] = useHover();
     const [mounted, setMounted] = useState(false);
     const [openModal, setOpenModal] = useState(false);
 
@@ -37,10 +33,9 @@ export default function ContactFab() {
               bgcolor: 'black',
               border: '1px solid black',
               '&:hover': {
-                border: '1px solid black',
+                border: '1px solid teal',
                 transition: '.8s',
                 color: '#ffffff'
-                
             }
           }}>
           <ContactMailIcon sx={{ mr: 1, color: 'black'}}/>
