@@ -1,6 +1,5 @@
 import { Box } from '@mui/system';
 import './App.css';
-import ContactFab from './Components/ContactFab';
 import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
 

@@ -8,12 +8,6 @@ import image3 from '../images/carswell_image_3.jpg'
 import image4 from '../images/carswell_image_4.jpg'
 import image5 from '../images/carswell_image_5.jpg'
 
-const image6 = function(){
-  return (
-    <img sx={{background: 'red'}}/>
-  )
-}
-
 function Home() {
   return (
     <Box 
