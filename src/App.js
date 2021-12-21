@@ -28,7 +28,6 @@ function App() {
         bottom: 0,
         right: 200,
       }}>
-      <ContactFab sx={{ }}/>
     </Box>
   </Box>
 );

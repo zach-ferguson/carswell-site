@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from 'emailjs-com';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -25,7 +26,17 @@ const modalStyle = {
 export default function EmailModal(props) {
     const [emailError] = useState(false);
     const [nameError] = useState(false);
+    const form = useRef()
 
+    const sendEmail = (e) => {
+      e.preventDefault();
+      emailjs.sendForm('service_fprqmnf', 'template_rd5xp9s', form.current, 'user_biQ4OVvhWyZ1XMhhHN01m')
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
+    };
 
   return (
     <div>
@@ -33,8 +44,7 @@ export default function EmailModal(props) {
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={props.open}
-        onClose={() => {props.setOpen(false)}}
-        onBackdropClick={() => {props.setOpen(false)}}
+        onClose={() => {props.setOpen(false);console.log("close")}}
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
@@ -75,7 +85,7 @@ export default function EmailModal(props) {
                     sx={{ marginTop: '25px', width: '400px', height: '600px'}}
                     placeholder='Message'
                   />
-                  <Button disableRipple={true} className='send-button'
+                  <Button disableRipple={true} className='send-button' onClick={() => {sendEmail()}}
                     sx={{
                       display: 'flex',
                       alignItems: 'center',
