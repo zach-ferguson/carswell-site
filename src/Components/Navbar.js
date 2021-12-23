@@ -4,12 +4,14 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
 import SmoothList from 'react-smooth-list';
 import '../css/Navbar.css'
-import { Slide } from '@mui/material';
+import { CardMedia, Slide } from '@mui/material';
+import microphone_image from '../images/microphone-64.png'
+
+
 
 export default function Navbar() {
   const [mounted] = useState(true)
@@ -21,24 +23,24 @@ export default function Navbar() {
         ml: 'auto',
         }}>
         <AppBar position="static" sx={{ height: '100px' }}>
-          <Toolbar sx={{ flexGrow: 1, display: 'flex', width: '100%'}}>
-            <Box sx={{ display: 'flex', alignItems: 'center', width: '300px', ml: '10%' }}>
-              <IconButton
-                  size="large"
-                  edge="start"
-                  color="inherit"
-                  aria-label="menu"
-                  sx={{ mr: 1,
-                    '&:hover': {
-                      cursor: 'default'
-                    }
-                   }}
-                  
-                >
-                  <MusicNoteIcon sx={{ 
-                    fontSize: 32,
-                  }}/>
-              </IconButton>
+          <Toolbar sx={{ flexGrow: 1, display: 'flex', flexDirection: { xs: 'column', sm: 'row'}, width: '100%'}}>
+            <Box sx={{ display: 'flex', alignItems: 'center', width: '300px', mt: {xs: '5px' , sm: '0'} , ml: {xs: '20%' , sm: '10%'}}}>
+              <Box
+                sx={{ 
+                  mr: 1,
+                  '&:hover': {
+                    cursor: 'default'
+                  }
+                  }}>
+                  <CardMedia
+                    image={microphone_image}
+                    title={'microphone'}
+                    component="img"
+                    sx={{
+                      maxWidth: '24px',
+                    }}
+                    />
+              </Box>
               <Typography variant="h6" component="div" 
                 sx={{ 
                   flexGrow: 1 , 
@@ -52,7 +54,7 @@ export default function Navbar() {
                 Carswell Music 
               </Typography>
             </Box>
-            <Box sx={{ ml: 'auto', mr: '10%' }}>
+            <Box sx={{ ml: {xs: 0, sm: 'auto'}, mr: {xs: 0, sm: '10%'}}}>
               {
               <SmoothList className='smoothlist' childClassName='smoothlistChild' duration={600} delay={100}>
                 <Box sx={{ mr: 2, width: '100%', ml: 'auto', }}> 
@@ -83,7 +85,7 @@ export default function Navbar() {
                   </a>
                 </Box>
                 <Box sx={{ mr: 2 }}>
-                  <a target='_blank' rel="noreferrer" href={'http://tinyurl.com/96f6y3vf'}>
+                  <a target='_blank' rel="noreferrer" href={'https://open.spotify.com/playlist/7whoqO8hn717qz31qJ61mz?si=njq9I5V5TYuBiCs3XWc-kg&nd=1'}>
                     <IconButton sx={{ 
                       transition: '.4s',
                       '&:hover':{

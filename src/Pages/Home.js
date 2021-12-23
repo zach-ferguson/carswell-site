@@ -2,11 +2,11 @@ import { Box } from '@mui/system'
 import React from 'react'
 import { alpha } from '@mui/material/styles';
 import BackgroundSlider from 'react-background-slider'
-import image1 from '../images/carswell_image_1.jpg'
-import image2 from '../images/carswell_image_2.jpg'
-import image3 from '../images/carswell_image_3.jpg'
-import image4 from '../images/carswell_image_4.jpg'
-import image5 from '../images/carswell_image_5.jpg'
+import image1 from '../images/IMG_2725.jpg'
+import image2 from '../images/IMG_2737.jpg'
+import image3 from '../images/IMG_2829.jpg'
+import image4 from '../images/IMG_2832.jpg'
+import image5 from '../images/IMG_2849.jpg'
 
 function Home() {
   return (
