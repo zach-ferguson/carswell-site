@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
 import SmoothList from 'react-smooth-list';
 import '../css/Navbar.css'
 import { CardMedia, Slide } from '@mui/material';
-import microphone_image from '../images/microphone-64.png'
+import logo from '../images/logo.png'
 
 
 
@@ -22,9 +21,9 @@ export default function Navbar() {
         flexGrow: 1, 
         ml: 'auto',
         }}>
-        <AppBar position="static" sx={{ height: '100px' }}>
-          <Toolbar sx={{ flexGrow: 1, display: 'flex', flexDirection: { xs: 'column', sm: 'row'}, width: '100%'}}>
-            <Box sx={{ display: 'flex', alignItems: 'center', width: '300px', mt: {xs: '5px' , sm: '0'} , ml: {xs: '20%' , sm: '10%'}}}>
+        <AppBar position="static" sx={{ height: '150px' }}>
+          <Toolbar sx={{ flexGrow: 1, display: 'flex', flexDirection: 'row', width: '100%'}}>
+            <Box sx={{ display: 'flex', alignItems: 'center', width: '300px', ml: {xs: '0' , sm: '10%'}}}>
               <Box
                 sx={{ 
                   mr: 1,
@@ -33,28 +32,16 @@ export default function Navbar() {
                   }
                   }}>
                   <CardMedia
-                    image={microphone_image}
-                    title={'microphone'}
+                    image={logo}
+                    title={'logo'}
                     component="img"
                     sx={{
-                      maxWidth: '24px',
+                      maxWidth: '150px',
                     }}
                     />
               </Box>
-              <Typography variant="h6" component="div" 
-                sx={{ 
-                  flexGrow: 1 , 
-                  fontFamily: 'Nunito Sans',
-                  fontSize: 26,
-                  color: '#cfd8dc',
-                  '&:hover': {
-                    cursor: 'default',
-                  }
-                  }}>
-                Carswell Music 
-              </Typography>
             </Box>
-            <Box sx={{ ml: {xs: 0, sm: 'auto'}, mr: {xs: 0, sm: '10%'}}}>
+            <Box sx={{ ml: {xs: 0, sm: 'auto'}, mr: {xs: '10%', sm: '10%'}}}>
               {
               <SmoothList className='smoothlist' childClassName='smoothlistChild' duration={600} delay={100}>
                 <Box sx={{ mr: 2, width: '100%', ml: 'auto', }}> 
@@ -63,7 +50,7 @@ export default function Navbar() {
                       transition: '.4s',
                       '&:hover':{
                         boxShadow: '0 2px 15px 0px gray',
-                        transition: '.4s'
+                        transition: '.2s'
                       }
                      }}>
                       <EmailIcon sx={{ color: '#FFFFFF', fontSize: '32px',
@@ -77,7 +64,7 @@ export default function Navbar() {
                       transition: '.4s',
                       '&:hover':{
                         boxShadow: '0 2px 15px 0 gray',
-                        transition: '.4s'
+                        transition: '.2s'
                       }
                      }}>
                       <TwitterIcon sx={{ color: '#00ACEE', width: '32px', height: '32px'}}/>
@@ -90,7 +77,7 @@ export default function Navbar() {
                       transition: '.4s',
                       '&:hover':{
                         boxShadow: '0 2px 15px 0 gray',
-                        transition: '.4s'
+                        transition: '.2s'
                       }
                      }}>
                       <img className='icon' alt={'spotify_icon'} src={process.env.PUBLIC_URL + '/spotify_icon.png'} />

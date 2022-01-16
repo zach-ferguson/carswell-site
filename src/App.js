@@ -2,8 +2,10 @@ import { Box } from '@mui/system';
 import './App.css';
 import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
+import TestModal from './Components/TestModal';
 
 function App() {
+
   return (
     <Box className="App"
       sx={{
@@ -27,6 +29,7 @@ function App() {
         bottom: 0,
         right: 200,
       }}>
+        <TestModal />
     </Box>
   </Box>
 );
