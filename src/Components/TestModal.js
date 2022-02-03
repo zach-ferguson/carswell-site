@@ -10,6 +10,8 @@ import { Fab, TextField, Typography, Slide } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 import CustomSnackbar from './CustomSnackbar'
 import ContactMailIcon from '@mui/icons-material/ContactMail';
+import * as EmailValidator from 'email-validator';
+
 
 import '../css/fab.css';
 
@@ -39,12 +41,14 @@ export default function TestModal() {
     setOpen(false); 
     setHideFab(false);
   }
-  const [emailError] = useState(false);
-  const [nameError] = useState(false);
-  const form = useRef()
-  const [loadingSend, setLoadingSend] = useState(false)
-  const [openSuccess, setOpenSuccess] = useState(false)
-  const [openFailure, setOpenFailure] = useState(false)
+  const [emailValue, setEmailValue] = useState();
+  const [nameValue, setNameValue] = useState();
+  const [emailError, setEmailError] = useState(false);
+  const [nameError, setNameError] = useState(false);
+  const form = useRef();
+  const [loadingSend, setLoadingSend] = useState(false);
+  const [openSuccess, setOpenSuccess] = useState(false);
+  const [openFailure, setOpenFailure] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -53,18 +57,26 @@ export default function TestModal() {
   },[])
 
   const sendEmail = () => {
-    setLoadingSend(true);
-    emailjs.sendForm('service_fprqmnf', 'template_rd5xp9s', form.current, 'user_biQ4OVvhWyZ1XMhhHN01m')
-      .then((result) => {
-        console.log(result.text);
-        if(result.status === 200){
-          setLoadingSend(false)
-          successMessage();
-        }
-      }, (error) => {
-        console.log(error.text);
-        failMessage();
+    if(!EmailValidator.validate(emailValue)){
+      setEmailError(true);
+    }
+    if(!nameValue){
+      setNameError(true);
+    }
+    if(nameValue && EmailValidator.validate(emailValue)){
+      setLoadingSend(true);
+      emailjs.sendForm('service_fprqmnf', 'template_rd5xp9s', form.current, process.env.REACT_APP_EMAIL_JS_ID)
+        .then((result) => {
+          console.log(result.text);
+          if(result.status === 200){
+            setLoadingSend(false)
+            successMessage();
+          }
+        }, (error) => {
+          console.log(error.text);
+          failMessage();
       });
+    }
   };
 
   const successMessage = () => {
@@ -139,6 +151,8 @@ export default function TestModal() {
                       name="user_name"
                       sx={{ marginTop: '10px', width: {xs: '300px', sm: '400px'},  }}
                       variant='outlined'
+                      value={nameValue}
+                      onChange={(e) => {setNameValue(e.target.value); setNameError(false);}}
                       />
                   <TextField
                       error={emailError}
@@ -149,6 +163,8 @@ export default function TestModal() {
                       name="user_email"
                       sx={{ marginTop: '25px', width: {xs: '300px', sm: '400px'}}}
                       variant='outlined'
+                      value={emailValue}
+                      onChange={(e) => {setEmailValue(e.target.value); setEmailError(false);}}
                   />
                   <TextField
                       multiline
