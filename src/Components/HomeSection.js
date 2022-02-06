@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import PhotoCredit from '../Components/PhotoCredit';
 import EmailModal from './EmailModal';
-import { Box, Typography, useMediaQuery } from '@mui/material';
+import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import BackgroundSlider from 'react-background-slider'
 import image3 from '../images/IMG_2725.jpg'
 import image1 from '../images/IMG_2737.jpg'
@@ -45,13 +45,13 @@ function HomeSection() {
     const theme = useTheme(); 
     const mobile = !useMediaQuery(theme.breakpoints.up('md'));
     const el = useRef();
-    const tl = gsap.timeline();
 
     useEffect(() => {
+        const tl = gsap.timeline();
         tl.to("#bottom-frame-glow", { attr: { stroke:"#01DBEC" }, duration: 4, repeat: -1, yoyo: true })
           .to("#bottom-frame-glow", { stroke:"#c02f7f", duration: 4, repeat: -1, yoyo: true })
           .to("#bottom-frame-glow", { stroke:"#089EBA", duration: 4, repeat: -1, yoyo: true })
-    }, []);
+    },[]);
 
   return (
     <Box id='home-root' sx={ homeRootStyles }>
@@ -72,12 +72,12 @@ function HomeSection() {
           <EmailModal />
         </Box>
         <Box sx={ learnMoreStyles }>
-            <a onClick={() => scroll.scrollTo(mobile? 800 : 850)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <Button onClick={() => scroll.scrollTo(mobile? 800 : 850)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: 'white' }}>
                 <Typography sx={{ '&:hover': { cursor: 'pointer' } }}>
                     Learn More
                 </Typography>
                 <img alt='down' src={downIcon} />
-            </a>
+            </Button>
         </Box>
         <Box sx={{ width: '120%', height: '246px', ml: '-10%', mt: '-170px', display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 10}}>
             <svg className='bottom-frame-glow' width="3000" height="300"  xmlns="http://www.w3.org/2000/svg" version="1.1">

@@ -13,7 +13,7 @@ const style = {
 
 function PhotoCredit() {
     return (
-        <a target="_blank" href='https://www.instagram.com/treygriffin_/'>
+        <a target="_blank" rel="noreferrer" href='https://www.instagram.com/treygriffin_/'>
             <Typography sx={ style }>
                 Photos by Trey Griffin
             </Typography>

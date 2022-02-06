@@ -27,7 +27,6 @@ function EmailForm(props) {
         }
         if(nameValue && EmailValidator.validate(emailValue)){
         setLoadingSend(true);
-        /*
         emailjs.sendForm('service_fprqmnf', 'template_rd5xp9s', form.current, process.env.REACT_APP_EMAIL_JS_ID)
             .then((result) => {
             console.log(result.text);
@@ -39,8 +38,6 @@ function EmailForm(props) {
             console.log(error.text);
             failMessage();
         });
-        */
-        console.log('sent')
         successMessage();
         }
     };

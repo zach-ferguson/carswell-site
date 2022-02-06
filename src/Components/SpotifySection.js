@@ -25,12 +25,12 @@ function SpotifySection() {
   const theme = useTheme();
   const mobile = !useMediaQuery(theme.breakpoints.up('md'));
   const el = useRef();
-  const tl = gsap.timeline();
 
   useEffect(() => {
-      tl.to("#bottom-frame-glow", { attr: { stroke:"#01DBEC" }, duration: 4, repeat: -1, yoyo: true })
-        .to("#bottom-frame-glow", { stroke:"#c02f7f", duration: 4, repeat: -1, yoyo: true })
-        .to("#bottom-frame-glow", { stroke:"#089EBA", duration: 4, repeat: -1, yoyo: true })
+    const tl = gsap.timeline();
+    tl.to("#bottom-frame-glow", { attr: { stroke:"#01DBEC" }, duration: 4, repeat: -1, yoyo: true })
+      .to("#bottom-frame-glow", { stroke:"#c02f7f", duration: 4, repeat: -1, yoyo: true })
+      .to("#bottom-frame-glow", { stroke:"#089EBA", duration: 4, repeat: -1, yoyo: true })
   }, []);
 
   return (
