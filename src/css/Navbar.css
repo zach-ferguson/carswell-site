@@ -17,8 +17,8 @@
   }
 
 .icon {
-  max-width: 32px;
-  max-height: 32px;
+  max-width: 48px;
+  max-height: 48px;
 }
 
 .smoothlist {
@@ -31,4 +31,8 @@
 }
 
 .smoothlistChild{
+}
+
+#bottom-frame-glow {
+  stroke: #16171C;
 }
