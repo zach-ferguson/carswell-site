@@ -1,5 +1,5 @@
 import { CardMedia, Typography, useMediaQuery } from '@mui/material';
-import { Box, breakpoints } from '@mui/system';
+import { Box } from '@mui/system';
 import React, { useRef, useEffect  } from 'react';
 import chrisPic from '../images/chris-pic2.jpg'
 import gsap from 'gsap/all';

@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="Carswell Music Studios"
-      content="Louisville based, professional-quality vocal recording and production."
+      content="Louisville based, professional-quality vocal recording, mixing, and production."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,13 +23,12 @@
     </script>
     <script type="text/javascript">
       (function(){
-          emailjs.init("user_biQ4OVvhWyZ1XMhhHN01m");
+          emailjs.init(process.env.REACT_APP_EMAIL_JS_ID);
       })();
     </script>
     <title>Carswell Music</title>
   </head>
   <body>
     <div id="root"></div>
-
   </body>
 </html>

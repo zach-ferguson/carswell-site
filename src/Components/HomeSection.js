@@ -10,14 +10,7 @@ import image4 from '../images/IMG_2832.jpg'
 import downIcon from '../images/icons8-double-down-48.png'
 import '../css/Navbar.css';
 import gsap from 'gsap/all';
-import {
-    Link,
-    Element,
-    Events,
-    animateScroll as scroll,
-    scrollSpy,
-    scroller
-  } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 import { useTheme } from '@emotion/react';
 
 const homeRootStyles = {

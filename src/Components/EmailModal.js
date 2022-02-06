@@ -3,14 +3,7 @@ import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import Button from '@mui/material/Button';
-import emailjs from 'emailjs-com';
-import SendIcon from '@mui/icons-material/Send';
-import { Fab, TextField, Typography, Slide } from '@mui/material';
-import CircularProgress from '@mui/material/CircularProgress';
-import CustomSnackbar from './CustomSnackbar'
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import * as EmailValidator from 'email-validator';
+import { Fab, Typography, Slide } from '@mui/material';
 import '../css/fab.css';
 import EmailForm from './EmailForm';
 

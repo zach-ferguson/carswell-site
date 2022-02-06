@@ -2,10 +2,7 @@ import { Box, Card, Grid, Icon, Typography } from '@mui/material';
 import React from 'react';
 import audiowaveIcon from '../images/icons8-audio-wave2-100.png'
 import microphoneIcon from '../images/icons8-microphone-100.png'
-import microphoneIcon2 from '../images/icons8-microphone-100-2.png'
-import microphoneIcon3 from '../images/icons8-microphone-100-3.png'
 import sliderIcon from '../images/icons8-slider-100.png'
-
 
 const rootStyles = {
     background: 'black',
