@@ -86,7 +86,7 @@ export default function TestModal() {
                 my: 'auto',
               }}
               >
-              <EmailForm modal={true}/>
+              <EmailForm modal={true} handleClose={handleClose}/>
             </Box>
           </Box>
         </Fade>

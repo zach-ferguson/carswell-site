@@ -37,8 +37,7 @@ function EmailForm(props) {
             }, (error) => {
             console.log(error.text);
             failMessage();
-        });
-        successMessage();
+            });
         }
     };
 
@@ -113,14 +112,14 @@ function EmailForm(props) {
                     },
                     }}> 
                     {!loadingSend?
-                    <>
-                        Send
-                        <SendIcon sx={{
-                        ml: '1rem',
-                        }}/>
-                    </>
+                        <>
+                            Send
+                            <SendIcon sx={{
+                            ml: '1rem',
+                            }}/>
+                        </>
                     :
-                    <CircularProgress />
+                        <CircularProgress />
                     }
                 </Button>
             </Box>
