@@ -46,6 +46,7 @@ export default function TestModal() {
             sx={{ zIndex: 900 }}>
             <Fab className='fab' variant={'extended'} autoCapitalize={false} disableRipple={true} onClick={handleOpen} size='large'
                 sx={{
+                    zIndex: 900,
                     display: hideFab? 'none' : '',
                     width: '250px',
                     bgcolor: 'black',

@@ -8,12 +8,13 @@ const rootStyles = {
     background: 'black',
     height: 'fit-content',
     width: '100%',
-    mt: '-300px',
+    mt: {xs: '-250px', md: '-300px'}
 }
 
 const cardStyles = {
     width: '100%',
-    height: '500px',
+    height: 'fit-content',
+    minHeight: '500px',
     borderRadius: '25px',
     marginTop: '100px',
     marginBottom: '1rem',
