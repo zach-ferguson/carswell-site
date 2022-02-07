@@ -1,9 +1,9 @@
 import { CardMedia, Typography, useMediaQuery } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useRef, useEffect  } from 'react';
-import chrisPic from '../images/chris-pic2.jpg'
+import chrisPic from '../images/chris-pic2.webp'
 import gsap from 'gsap/all';
-import image2 from '../images/IMG_2849_dark3.png'
+import image2 from '../images/IMG_2849_dark3.webp'
 import { useTheme } from '@emotion/react';
 
 const spotifySectionStyles = {

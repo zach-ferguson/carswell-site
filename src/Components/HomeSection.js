@@ -3,10 +3,10 @@ import PhotoCredit from '../Components/PhotoCredit';
 import EmailModal from './EmailModal';
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import BackgroundSlider from 'react-background-slider'
-import image3 from '../images/IMG_2725.jpg'
-import image1 from '../images/IMG_2737.jpg'
-import image2 from '../images/IMG_2829.jpg'
-import image4 from '../images/IMG_2832.jpg'
+import image3 from '../images/IMG_2725.webp'
+import image1 from '../images/IMG_2737.webp'
+import image2 from '../images/IMG_2829.webp'
+import image4 from '../images/IMG_2832.webp'
 import downIcon from '../images/icons8-double-down-48.png'
 import '../css/Navbar.css';
 import gsap from 'gsap/all';
