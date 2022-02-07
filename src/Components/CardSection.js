@@ -40,7 +40,7 @@ function CardSection() {
         <Grid item xs={10} md={3}>
             <Card sx={ cardStyles }>
                 <Box sx={ iconStyles }>
-                    <img alt='microphone-icon' src={ microphoneIcon } style={{ width: '64px' }}/>
+                    <img alt='microphone-icon' src={ microphoneIcon } style={{ width: '64px', height: '64px' }}/>
                 </Box>
                 <Typography sx={{ fontSize: '48px', mt: '1rem', }}>
                     Recording
@@ -53,7 +53,7 @@ function CardSection() {
         <Grid item xs={10} md={3}>
             <Card sx={ cardStyles }>
                 <Box sx={ iconStyles }>
-                    <img alt='slider-icon' src={ sliderIcon } style={{ width: '64px' }}/>
+                    <img alt='slider-icon' src={ sliderIcon } style={{ width: '64px', height: '64px' }}/>
                 </Box>
                 <Typography sx={{ fontSize: '48px', mt: '1rem', }}>
                     Mixing
@@ -66,7 +66,7 @@ function CardSection() {
         <Grid item xs={10} md={3}>
             <Card sx={ cardStyles }>
                 <Box sx={ iconStyles }>
-                    <img alt='audiowave-icon' src={ audiowaveIcon } style={{ width: '64px' }}/>
+                    <img alt='audiowave-icon' src={ audiowaveIcon } style={{ width: '64px', height: '64px' }}/>
                 </Box>
                 <Typography sx={{ fontSize: '48px', mt: '1rem', }}>
                     Mastering

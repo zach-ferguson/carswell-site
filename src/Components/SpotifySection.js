@@ -16,6 +16,7 @@ const spotifySectionStyles = {
 }
 
 const imageStyles = {
+  width: '336px',
   height: '504px',
   borderRadius: '12px',
   opacity: '1',
