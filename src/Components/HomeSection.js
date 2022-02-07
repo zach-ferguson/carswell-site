@@ -10,8 +10,8 @@ import image2 from '../images/IMG_2829.webp'
 import image4 from '../images/IMG_2832.webp'
 import downIcon from '../images/icons8-double-down-48.webp'
 import gsap from 'gsap/all';
-import { animateScroll as Element, Link } from "react-scroll";
 import EmailModal from './EmailModal';
+import { Link, Element } from 'react-scroll'
 
 const homeRootStyles = {
     height: '100vh',
@@ -67,7 +67,7 @@ function HomeSection() {
             <Typography sx={{ fontSize: {xs: '18px', md: '24px'}, textAlign: 'center', maxWidth: {xs: '90%'}, mx: 'auto', mt: {xs: '1rem'} }}>
                 Recording, Production & Mixing for Vocalists
             </Typography>
-        </Box>
+        </Box> 
         <Box sx={{ marginTop: {xs: '2rem', md: '8rem'}, mx: 'auto'}}>
           <EmailModal />
         </Box>
