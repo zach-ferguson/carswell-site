@@ -12,6 +12,7 @@ import '../css/Navbar.css'
 const iconBoxStyle = {
     mx: '1rem',
     maxHeight: '32px', 
+    maxWidth: '32px'
 }
   
 const iconButtonStyle = {
@@ -23,7 +24,8 @@ transition: '.1s',
 }
 
 const iconStyle = { 
-    width: '32px'
+    width: '32px',
+    height: '32px'
 }
   
 

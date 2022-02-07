@@ -76,7 +76,7 @@ function HomeSection() {
                 <Typography sx={{ '&:hover': { cursor: 'pointer' } }}>
                     Learn More
                 </Typography>
-                <img alt='down' src={downIcon} />
+                <img alt='down' src={downIcon} style={{ width: '48px', height: '48px' }}/>
             </Button>
         </Box>
         <Box sx={{ width: '120%', height: '246px', ml: '-10%', mt: '-170px', display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 10}}>
