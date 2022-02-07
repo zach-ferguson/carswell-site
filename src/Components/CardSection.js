@@ -1,8 +1,8 @@
 import { Box, Card, Grid, Typography } from '@mui/material';
 import React from 'react';
-import audiowaveIcon from '../images/icons8-audio-wave2-100.png'
-import microphoneIcon from '../images/icons8-microphone-100.png'
-import sliderIcon from '../images/icons8-slider-100.png'
+import audiowaveIcon from '../images/icons8-audio-wave2-100.webp'
+import microphoneIcon from '../images/icons8-microphone-100.webp'
+import sliderIcon from '../images/icons8-slider-100.webp'
 
 const rootStyles = {
     background: 'black',

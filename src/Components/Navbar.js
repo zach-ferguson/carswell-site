@@ -6,11 +6,11 @@ import IconButton from '@mui/material/IconButton';
 import SmoothList from 'react-smooth-list';
 import '../css/Navbar.css'
 import { CardMedia, Slide } from '@mui/material';
-import logo from '../images/logo.png'
-import spotifyLogo from '../images/icons8-spotify-48.png'
-import youtubeLogo from '../images/icons8-youtube-48.png'
-import twitterLogo from '../images/icons8-twitter-squared-48.png'
-import instagramLogo from '../images/icons8-instagram-48.png'
+import logo from '../images/logo.webp'
+import spotifyLogo from '../images/icons8-spotify-48.webp'
+import youtubeLogo from '../images/icons8-youtube-48.webp'
+import twitterLogo from '../images/icons8-twitter-squared-48.webp'
+import instagramLogo from '../images/icons8-instagram-48.webp'
 
 const toolbarStyle = {
   flexGrow: 1,
@@ -59,6 +59,8 @@ export default function Navbar() {
                     sx={{
                       mt: '-20px',
                       maxWidth: '200px',
+                      width: '200px',
+                      height: '200px',
                     }}/>
               </Box>
             <Box sx={{ mt: '-15px' }}>

@@ -2,10 +2,10 @@ import { Box } from '@mui/material';
 import React from 'react';
 import IconButton from '@mui/material/IconButton';
 import '../css/Navbar.css'
-import spotifyLogo from '../images/icons8-spotify-48.png'
-import youtubeLogo from '../images/icons8-youtube-48.png'
-import twitterLogo from '../images/icons8-twitter-squared-48.png'
-import instagramLogo from '../images/icons8-instagram-48.png'
+import spotifyLogo from '../images/icons8-spotify-48.webp'
+import youtubeLogo from '../images/icons8-youtube-48.webp'
+import twitterLogo from '../images/icons8-twitter-squared-48.webp'
+import instagramLogo from '../images/icons8-instagram-48.webp'
 import '../css/Navbar.css'
 
 

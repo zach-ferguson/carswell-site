@@ -7,7 +7,7 @@ import image3 from '../images/IMG_2725.webp'
 import image1 from '../images/IMG_2737.webp'
 import image2 from '../images/IMG_2829.webp'
 import image4 from '../images/IMG_2832.webp'
-import downIcon from '../images/icons8-double-down-48.png'
+import downIcon from '../images/icons8-double-down-48.webp'
 import '../css/Navbar.css';
 import gsap from 'gsap/all';
 import { animateScroll as scroll } from "react-scroll";
